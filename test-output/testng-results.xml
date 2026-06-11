@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-04T14:06:23 IST" name="Default suite" finished-at="2026-06-04T14:06:48 IST" duration-ms="25795">
+  <suite started-at="2026-06-11T20:21:02 IST" name="Default suite" finished-at="2026-06-11T20:21:20 IST" duration-ms="17804">
     <groups>
     </groups>
-    <test started-at="2026-06-04T14:06:23 IST" name="Default test" finished-at="2026-06-04T14:06:48 IST" duration-ms="25795">
+    <test started-at="2026-06-11T20:21:02 IST" name="Default test" finished-at="2026-06-11T20:21:20 IST" duration-ms="17804">
       <class name="orangeHrm.Login_Test">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:orangeHrm.Login_Test@1c1bbc4e]" started-at="2026-06-04T14:06:23 IST" name="Setup" finished-at="2026-06-04T14:06:44 IST" duration-ms="21232" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:orangeHrm.Login_Test@5dda768f]" started-at="2026-06-11T20:21:02 IST" name="Setup" finished-at="2026-06-11T20:21:19 IST" duration-ms="16540" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="Login_test_case()[pri:0, instance:orangeHrm.Login_Test@1c1bbc4e]" started-at="2026-06-04T14:06:44 IST" name="Login_test_case" finished-at="2026-06-04T14:06:48 IST" duration-ms="4140" status="PASS">
+        <test-method signature="Login_test_case()[pri:0, instance:orangeHrm.Login_Test@5dda768f]" started-at="2026-06-11T20:21:19 IST" name="Login_test_case" finished-at="2026-06-11T20:21:20 IST" duration-ms="885" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login_test_case -->
-        <test-method is-config="true" signature="Close()[pri:0, instance:orangeHrm.Login_Test@1c1bbc4e]" started-at="2026-06-04T14:06:48 IST" name="Close" finished-at="2026-06-04T14:06:48 IST" duration-ms="347" status="PASS">
+        <test-method is-config="true" signature="Close()[pri:0, instance:orangeHrm.Login_Test@5dda768f]" started-at="2026-06-11T20:21:20 IST" name="Close" finished-at="2026-06-11T20:21:20 IST" duration-ms="322" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Close -->
