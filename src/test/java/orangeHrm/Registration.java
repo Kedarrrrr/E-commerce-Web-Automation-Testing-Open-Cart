@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 public class Registration extends BaseClass {
 	
 	public Registration(WebDriver driver) {
-		super(driver);
+		//super(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -49,6 +49,9 @@ public class Registration extends BaseClass {
 	
 	@FindBy(xpath="//input[@value='Continue']")
 	WebElement cntBtn;
+	
+	@FindBy(xpath="//h1[normalize-space()='Your Account Has Been Created!']")
+	WebElement msg;
 	
 	
 	//Action methods
