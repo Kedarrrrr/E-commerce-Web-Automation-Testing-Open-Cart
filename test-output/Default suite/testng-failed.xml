@@ -6,8 +6,8 @@
       <class name="orangeHrm.Login_Test">
         <methods>
           <include name="Login_test_case"/>
-          <include name="Setup"/>
           <include name="Close"/>
+          <include name="Setup"/>
         </methods>
       </class> <!-- orangeHrm.Login_Test -->
     </classes>
