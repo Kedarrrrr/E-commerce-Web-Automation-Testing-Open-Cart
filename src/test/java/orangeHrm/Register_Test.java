@@ -17,7 +17,7 @@ public class Register_Test{
 	
 	@BeforeClass
 	public void setup() {
-		Logger logger = LogManager.getLogger(this.getClass());
+		//Logger logger = LogManager.getLogger(this.getClass());
 		driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get("http://localhost/Open%20Cart/");
@@ -33,12 +33,12 @@ public class Register_Test{
 	public void Register_test_case() {
 		Registration r= new Registration(driver);
 		r.register();
-		logger.info("Registration Clicked");
+		//logger.info("Registration Clicked");
 		r.setName("Kulnal", "Yelole");
 		r.setEmail("yleole@gmail.com");
 		r.setTelephone("0900000000");
 		r.setPassword("fjeijais");
-		logger.info("Details filled.");
+		//logger.info("Details filled.");
 		r.final_Reg();
 		Assert.assertEquals(true, r.msg);
 	}
