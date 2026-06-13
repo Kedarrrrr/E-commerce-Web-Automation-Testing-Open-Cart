@@ -14,23 +14,10 @@ public class BaseClass {
 
 	public Logger logger;
 	WebDriver driver;
-	/*public BaseClass(WebDriver driver) {
+
+	public BaseClass(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
-	}*/
-	
-	@BeforeClass
-	public void setup() {
-		logger=LogManager.getLogger(this.getClass());
-		driver=new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.get("http://localhost/Open%20Cart/");
-		driver.manage().window().maximize();
-	}
-	
-	@AfterClass
-	public void Close() {
-		driver.quit();
 	}
 	
 	
