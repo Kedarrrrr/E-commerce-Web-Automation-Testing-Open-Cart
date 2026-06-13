@@ -1,7 +1,5 @@
 package orangeHrm;
 
-import org.apache.hc.core5.util.Asserts;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
