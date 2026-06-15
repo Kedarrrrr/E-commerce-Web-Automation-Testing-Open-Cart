@@ -4,11 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import testBase.BaseClass;
+public class Login_Page extends BasePage{
 
-public class Login_Page extends BaseClass{
-
-	WebDriver driver;
+	//WebDriver driver;
 	public Login_Page(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub

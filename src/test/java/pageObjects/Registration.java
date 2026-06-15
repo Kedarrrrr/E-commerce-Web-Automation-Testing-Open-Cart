@@ -5,9 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import testBase.BaseClass;
-
-public class Registration extends BaseClass {
+public class Registration extends BasePage {
 	public Registration(WebDriver driver) {
 		super(driver);
 		this.driver=driver;
