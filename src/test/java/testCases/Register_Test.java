@@ -1,4 +1,4 @@
-package orangeHrm;
+package testCases;
 
 import java.time.Duration;
 
@@ -10,6 +10,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import pageObjects.Registration;
 public class Register_Test{
 	public Logger logger;
 	public WebDriver driver;
@@ -39,7 +40,7 @@ public class Register_Test{
 		r.setPassword("fjeijais");
 		//logger.info("Details filled.");
 		r.final_Reg();
-		Assert.assertEquals(true, r.msg);
+		Assert.assertEquals(true, r.getMsg());
 	}
 	
 

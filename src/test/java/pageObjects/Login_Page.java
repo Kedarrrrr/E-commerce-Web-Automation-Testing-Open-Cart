@@ -1,8 +1,10 @@
-package orangeHrm;
+package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import testBase.BaseClass;
 
 public class Login_Page extends BaseClass{
 
@@ -26,6 +28,7 @@ public class Login_Page extends BaseClass{
 	WebElement txt_pwd ;
 	
 	@FindBy(xpath="//input[@value='Login']")
+	public
 	WebElement logintn ;
 	
 	@FindBy(xpath="//h2[normalize-space()='My Account']")

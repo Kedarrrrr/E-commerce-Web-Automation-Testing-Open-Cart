@@ -1,4 +1,4 @@
-package orangeHrm;
+package testCases;
 
 import java.time.Duration;
 
@@ -8,6 +8,8 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import pageObjects.Login_Page;
 
 public class Login_Test {
 	WebDriver driver;

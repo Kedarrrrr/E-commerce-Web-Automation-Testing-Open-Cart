@@ -1,15 +1,16 @@
-package orangeHrm;
-
+package pageObjects;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import testBase.BaseClass;
+
 public class Registration extends BaseClass {
-	
 	public Registration(WebDriver driver) {
 		super(driver);
+		this.driver=driver;
 	}
 
 	@FindBy(xpath="//i[@class='fa fa-user']")
@@ -53,6 +54,10 @@ public class Registration extends BaseClass {
 	
 	
 	//Action methods
+	public String getMsg() {
+		String t=msg.getText();
+		return t;
+	}
 	public void register() {
 		accBtn.click();
 		regBtn.click();	
