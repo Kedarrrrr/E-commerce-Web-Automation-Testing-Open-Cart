@@ -12,6 +12,8 @@ public class Login_Page extends BasePage{
 		// TODO Auto-generated constructor stub
 	}
 	
+	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")
+	WebElement wrong_Login_alt;
 	
 	@FindBy(xpath="//i[@class='fa fa-user']")
 	WebElement accbtn ;
@@ -50,6 +52,11 @@ public class Login_Page extends BasePage{
 	}
 	public void log() {
 		logintn.click();
+	}
+	public String failed_login_msg() {
+		driver.switchTo().alert();
+		String msg=wrong_Login_alt.toString();
+		return msg;
 	}
 	
 }

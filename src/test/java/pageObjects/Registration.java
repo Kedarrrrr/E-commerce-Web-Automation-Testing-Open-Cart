@@ -10,7 +10,9 @@ public class Registration extends BasePage {
 		super(driver);
 		this.driver=driver;
 	}
-
+	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")
+	WebElement regMsg;
+	
 	@FindBy(xpath="//i[@class='fa fa-user']")
 	WebElement accBtn;
 	
@@ -18,8 +20,9 @@ public class Registration extends BasePage {
 	@FindBy(xpath="//a[normalize-space()='Register']")
 	WebElement regBtn;
 	
-	@FindBy(xpath="//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='Register']")
+	@FindBy(xpath="//input[@id='input-firstname']")
 	WebElement firstName;
+	
 	
 	@FindBy(xpath="//input[@id='input-lastname']")
 	WebElement lastName;
@@ -52,6 +55,13 @@ public class Registration extends BasePage {
 	
 	
 	//Action methods
+	public String getArltMsg() {
+		driver.switchTo().alert();
+		String txt=regMsg.getText();
+		driver.switchTo().defaultContent();
+		return txt;
+	}
+	
 	public String getMsg() {
 		String t=msg.getText();
 		return t;
