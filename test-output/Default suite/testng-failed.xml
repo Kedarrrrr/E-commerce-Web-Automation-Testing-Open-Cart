@@ -5,8 +5,8 @@
     <classes>
       <class name="testCases.Login_Test">
         <methods>
+          <include name="TC_002"/>
           <include name="tear"/>
-          <include name="TC_02"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testCases.Login_Test -->

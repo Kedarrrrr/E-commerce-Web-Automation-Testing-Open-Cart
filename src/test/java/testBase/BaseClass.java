@@ -25,12 +25,11 @@ public class BaseClass {
     public Logger logger;
     public Properties p;
 
-    @SuppressWarnings("deprecation")
-	@BeforeClass
+    @BeforeClass
     @Parameters({"os", "browser"})
     public void setup(String os, String br) throws IOException {
 
-    	FileReader fi=new FileReader("/Web_Testing/src/test/resources/Config.properties");
+    	FileReader fi=new FileReader( System.getProperty("user.dir") +"/src/test/resources/Config.properties");
     	p=new Properties();
     	p.load(fi);
     	logger=LogManager.getLogger(this.getClass() );
@@ -57,9 +56,9 @@ public class BaseClass {
     	}
     	if(p.getProperty("environment").equalsIgnoreCase("local")) {
     		switch(br.toLowerCase()) {
-        	case "chrome":driver=new ChromeDriver();
-        	case "edge": driver=new EdgeDriver();
-        	case "firefox": driver=new FirefoxDriver();
+        	case "chrome":driver=new ChromeDriver();break;
+        	case "edge": driver=new EdgeDriver();break;
+        	case "firefox": driver=new FirefoxDriver();break;
         	}
     	}
 		driver.manage().deleteAllCookies();
