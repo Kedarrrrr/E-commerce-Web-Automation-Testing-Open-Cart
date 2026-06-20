@@ -8,8 +8,8 @@ import testBase.BaseClass;
 
 public class Login_Test extends BaseClass {
 
-
-	@Test(priority=1)
+	
+	@Test(priority=2)
 	public void TC_002() {
 		Login_Page lt = new Login_Page(driver);
 		lt.start();
@@ -20,14 +20,14 @@ public class Login_Test extends BaseClass {
 		Assert.assertEquals("My Account", lt.compare_txt());
 	}
 	
-	@Test(priority=2)
+	@Test(priority=1)
 	public void TC_003(){
 		Login_Page lt = new Login_Page(driver);
 		lt.start();
 		lt.setMail("gadhaeletronis@gmail.com");
 		lt.setPwd("tapukeppa");
 		lt.logintn.click();
-		driver.switchTo().alert();
+		//driver.switchTo().alert();
 		Assert.assertEquals("Warning: No match for E-Mail Address and/or Password.", lt.failed_login_msg());		
 	}
 }

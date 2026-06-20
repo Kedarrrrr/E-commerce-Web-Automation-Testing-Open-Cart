@@ -54,8 +54,8 @@ public class Login_Page extends BasePage{
 		logintn.click();
 	}
 	public String failed_login_msg() {
-		driver.switchTo().alert();
-		String msg=wrong_Login_alt.toString();
+		//driver.switchTo().alert();
+		String msg=wrong_Login_alt.getText();
 		return msg;
 	}
 	

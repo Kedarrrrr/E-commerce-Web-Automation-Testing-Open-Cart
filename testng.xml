@@ -10,7 +10,7 @@
 
     <classes>
       <class name="testCases.Login_Test"/>
-      <class name="testCases.TC_003_Registration"/>
+      <class name="testCases.Wishlist_Test"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
