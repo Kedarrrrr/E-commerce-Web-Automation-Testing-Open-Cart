@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,11 +104,6 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="testCases.Login_Test" class="method navigator-link" hash-for-method="TC_003">TC_003</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testCases.Wishlist_Test" class="method navigator-link" hash-for-method="TC_005_add_wish">TC_005_add_wish</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -125,6 +120,16 @@
                         <a href="#" panel-name="suite-Suite" title="testCases.Login_Test" class="method navigator-link" hash-for-method="TC_002">TC_002</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testCases.Wishlist_Test" class="method navigator-link" hash-for-method="TC_005_add_wish">TC_005_add_wish</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testCases.Wishlist_Test" class="method navigator-link" hash-for-method="TC_006_remove_wish">TC_006_remove_wish</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
@@ -137,50 +142,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">testCases.Wishlist_Test</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_005_add_wish">
-                  </a> <!-- TC_005_add_wish -->
-                  <span class="method-name">TC_005_add_wish</span>
-                  <div class="stack-trace">org.openqa.selenium.InvalidElementStateException: invalid element state
-  (Session info: chrome=149.0.7827.116)
-Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ab57f43a727bd474662edde6c6d8f0f9, clearElement {id=f.8775F0B411AD7B6F806C9718EA669057.d.930DB6721C6C606D241BBEDA3B0EE4F4.e.125}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.116, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\kedar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53980}, goog:processID: 12500, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53980/devtoo..., se:cdpVersion: 149.0.7827.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (ab57f43a727bd474662edde6c6d8f0f9)] -&gt; xpath: //a[normalize-space()=&apos;MacBook&apos;]]
-Session ID: ab57f43a727bd474662edde6c6d8f0f9
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:129)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy31.clear(Unknown Source)
-	at pageObjects.Wishlist.wishlist_item(Wishlist.java:44)
-	at testCases.Wishlist_Test.TC_005_add_wish(Wishlist_Test.java:15)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-... Removed 21 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
@@ -205,6 +166,28 @@ Session ID: ab57f43a727bd474662edde6c6d8f0f9
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Wishlist_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_005_add_wish">
+                  </a> <!-- TC_005_add_wish -->
+                  <span class="method-name">TC_005_add_wish</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_006_remove_wish">
+                  </a> <!-- TC_006_remove_wish -->
+                  <span class="method-name">TC_006_remove_wish</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -278,24 +261,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC_003')
-data.setCell(0, 2, 'testCases.Login_Test')
-data.setCell(0, 3, 1721);
+data.setCell(0, 1, 'TC_005_add_wish')
+data.setCell(0, 2, 'testCases.Wishlist_Test')
+data.setCell(0, 3, 5041);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TC_002')
+data.setCell(1, 1, 'TC_003')
 data.setCell(1, 2, 'testCases.Login_Test')
-data.setCell(1, 3, 1535);
+data.setCell(1, 3, 1771);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TC_005_add_wish')
-data.setCell(2, 2, 'testCases.Wishlist_Test')
-data.setCell(2, 3, 1132);
+data.setCell(2, 1, 'TC_002')
+data.setCell(2, 2, 'testCases.Login_Test')
+data.setCell(2, 3, 1675);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'TC_006_remove_wish')
+data.setCell(3, 2, 'testCases.Wishlist_Test')
+data.setCell(3, 3, 1346);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 18 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -330,35 +317,40 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TC_003</span>
-                <span class="method-start">5613 ms</span>
+                <span class="method-start">4496 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.Wishlist_Test</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(windows, chrome)</span>
-                <span class="method-start">7359 ms</span>
+                <span class="method-start">6300 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">TC_005_add_wish</span>
-                <span class="method-start">10862 ms</span>
+                <span class="method-start">9018 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tear</span>
-                <span class="method-start">12001 ms</span>
-              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.Login_Test</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">TC_002</span>
-                <span class="method-start">12399 ms</span>
+                <span class="method-start">14062 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tear</span>
-                <span class="method-start">13935 ms</span>
+                <span class="method-start">15741 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Wishlist_Test</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">TC_006_remove_wish</span>
+                <span class="method-start">16175 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tear</span>
+                <span class="method-start">17522 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

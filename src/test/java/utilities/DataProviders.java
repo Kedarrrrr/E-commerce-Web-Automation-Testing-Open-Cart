@@ -26,4 +26,22 @@ public class DataProviders {
 		return logindata;
 	}
 	
+	@DataProvider(name="EquiryData")
+	public String[][] getinfo()throws IOException{
+		String path=".\\testData\\Opencart_LoginData.xlsx";
+		ExcelUtility xlutil =new ExcelUtility(path);
+		
+		int totalrows=xlutil.getRowCount("Sheet2");
+		int totalcols=xlutil.getCellCount("Sheet2",1);
+		
+		String enqdata[][]= new String[totalrows][totalcols];
+		
+		for(int i=1;i<=totalrows; i++) {
+			for(int j=0; j<totalcols; j++) {
+				enqdata[i-1][j]=xlutil.getCellData("Sheet2", i, j);		
+				}
+			}
+		return enqdata;	
+	}
+	
 }
