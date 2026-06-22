@@ -26,11 +26,11 @@ public class Contact_Page extends BasePage{
 	//input[@value='Submit']
 	//input[@value='Submit']
 	//body
-	
+	//a[contains(@href,'information/contact')]
 	//p[contains(text(),'Your enquiry has been successfully sent to the sto')]
 	//p[contains(text(),'Your enquiry has been successfully sent to the sto')]
 
-	@FindBy(xpath="//i[@class='fa fa-phone']")
+	@FindBy(xpath="//a[contains(@href,'information/contact')]")
 	WebElement contactbtn;
 	
 	@FindBy(xpath="//input[@id='input-name']")

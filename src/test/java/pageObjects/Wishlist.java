@@ -11,6 +11,13 @@ public class Wishlist extends BasePage{
 		// TODO Auto-generated constructor stub
 	}
 
+	//span[normalize-space()='My Account']
+	//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='My Account']
+	//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='My Account']
+	//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='My Account']
+	//a[@class='list-group-item'][normalize-space()='Wish List']
+	//a[@class='list-group-item'][normalize-space()='Wish List']
+	//a[@class='list-group-item'][normalize-space()='Wish List']
 	
 	@FindBy(xpath="//input[@placeholder='Search']")
 	WebElement srh;
@@ -18,13 +25,13 @@ public class Wishlist extends BasePage{
 	@FindBy(xpath="//button[@class='btn btn-default btn-lg']")
 	WebElement srhbtn;
 	
-	@FindBy(xpath="//a[normalize-space()='MacBook']")
+	@FindBy(xpath="//div[@class='caption']//a[contains(text(),'MacBook')]")
 	WebElement macBook;
 	
 	@FindBy(xpath="//button[@type='button']//i[@class='fa fa-heart']")
 	WebElement whishbtn;
 	
-	@FindBy(xpath="//a[@title='My Account']")
+	@FindBy(xpath="//span[normalize-space()='My Account']")
 	WebElement accbtn;
 	
 	@FindBy(xpath="//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='My Account']")
@@ -48,13 +55,17 @@ public class Wishlist extends BasePage{
 	@FindBy(xpath="//a[@class='btn btn-danger']")
 	WebElement rmbtn;
 	
-	
-	//div[@class='table-responsive']
 
+	//span[normalize-space()='Shopping Cart']"//i[@class='fa fa-heart']"undefined
+	//div[@class='table-responsive']
+	//span[normalize-space()='Shopping Cart']"//a[@class='list-group-item'][normalize-space()='Wish List']"undefined
 	//i[@class='fa fa-heart']
 	//i[@class='fa fa-heart']
 	//i[@class='fa fa-heart']
 	//a[normalize-space()='MacBook']
+	//div[@id='product-product']//div[@class='btn-group']//button[1]
+	//div[@id='product-product']//div[@class='btn-group']//button[1]
+	//button[@type='button']//i[@class='fa fa-heart']
 	
 	public void search(String product_name) {
 		srh.sendKeys(product_name);
@@ -64,11 +75,11 @@ public class Wishlist extends BasePage{
 		macBook.click();
 		whishbtn.click();
 		accbtn.click();
-		heartbtn.click();
+		drpmyacc.click();
 		whishlistbtn.click();
 	}
 	public String wish_list() {
-		whishlistbtn.click();
+		//whishlistbtn.click();
 		boolean i=item.isDisplayed();
 		if(i) {
 			rmbtn.click();
@@ -86,7 +97,6 @@ public class Wishlist extends BasePage{
 		String txt=verify_product.getText();
 		return txt;
 	}
-
 
 	
 }

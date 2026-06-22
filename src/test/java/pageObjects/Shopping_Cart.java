@@ -12,19 +12,23 @@ public class Shopping_Cart extends BasePage {
 	}
 
 
-	
+	//div[@class='table-responsive']
 	//i[@class='fa fa-home']
 	//html
 	//div[@class='caption']//a[contains(text(),'MacBook')]
 	
 	//html
 	//html
-	
+	//a[@title='Shopping Cart']
 	//button[@id='button-cart']
 	//span[normalize-space()='Shopping Cart']
 	//html
 	//html
 	//span[normalize-space()='Shopping Cart']
+	
+	@FindBy(xpath="//div[@class='table-responsive']")
+	WebElement table;
+	
 	@FindBy(xpath="//i[@class='fa fa-home']")
 	WebElement homebtn;
 	
@@ -48,14 +52,16 @@ public class Shopping_Cart extends BasePage {
 		product.click();
 		cart_btn.click();
 	}
+	public boolean Table() {
+		return table.isDisplayed();
+	}
 	public String remove_item() {
-		if(empty_cart_msg.isDisplayed()) {
-			String txt=empty_cart_msg.getText();
-			return txt;
-		}else {
-			
+		view_cart.click();
+		while(table.isDisplayed()) {
 			rmbtn.click();
 		}
+		String txt=empty_cart_msg.getText();
+		return txt;
 	}
 	
 }

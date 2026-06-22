@@ -17,7 +17,7 @@ public class Wishlist_Test extends BaseClass{
 		lt.setMail("gadhaelectronics@gmail.com");
 		lt.setPwd("tapukepapa");
 		lt.logintn.click();
-		wl.search("MacBook");
+		//wl.search("MacBook");
 		wl.wishlist_item();
 		Assert.assertEquals("MacBook",wl.check_item() );
 	}
