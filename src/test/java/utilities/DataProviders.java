@@ -26,7 +26,7 @@ public class DataProviders {
 		return logindata;
 	}
 	
-	@DataProvider(name="EquiryData")
+	@DataProvider(name="EnquiryData")
 	public String[][] getinfo()throws IOException{
 		String path=".\\testData\\Opencart_LoginData.xlsx";
 		ExcelUtility xlutil =new ExcelUtility(path);

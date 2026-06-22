@@ -10,7 +10,8 @@
 
     <classes>
       <class name="testCases.Login_Test"/>
-      <class name="testCases.Wishlist_Test"></class>
+      <class name="testCases.Wishlist_Test"/>
+      <class name="testCases.Contact_Test"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

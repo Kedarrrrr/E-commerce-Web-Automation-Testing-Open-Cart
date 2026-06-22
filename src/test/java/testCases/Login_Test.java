@@ -11,7 +11,9 @@ public class Login_Test extends BaseClass {
 	
 	@Test(priority=2)
 	public void TC_002() {
+		//login test with correct credentials
 		Login_Page lt = new Login_Page(driver);
+		//lt.Logout();
 		lt.start();
 		lt.setMail("gadhaelectronics@gmail.com");
 		lt.setPwd("tapukepapa");
@@ -22,7 +24,9 @@ public class Login_Test extends BaseClass {
 	
 	@Test(priority=1)
 	public void TC_003(){
+		//Login Test with incorrect credentials
 		Login_Page lt = new Login_Page(driver);
+		lt.Logout();
 		lt.start();
 		lt.setMail("gadhaeletronis@gmail.com");
 		lt.setPwd("tapukeppa");

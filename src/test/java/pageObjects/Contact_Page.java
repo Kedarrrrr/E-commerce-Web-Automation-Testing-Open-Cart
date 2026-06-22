@@ -48,6 +48,9 @@ public class Contact_Page extends BasePage{
 	@FindBy(xpath="//p[contains(text(),'Your enquiry has been successfully sent to the sto')]")
 	WebElement display_txt;
 	
+	@FindBy(xpath="//div[@class='text-danger']")
+	WebElement danger_txt;
+	
 	
 	public void contact(String name, String email) {
 		contactbtn.click();
@@ -61,5 +64,13 @@ public class Contact_Page extends BasePage{
 		return display_txt.getText();
 		//Your enquiry has been successfully sent to the store owner
 	}
+
+	public String danger_msg(String msg) {
+		enquiery.sendKeys(msg);
+		submitbtn.click();
+		return danger_txt.getText();
+		//Your enquiry has been successfully sent to the store owner
+	}
+
 	
 }

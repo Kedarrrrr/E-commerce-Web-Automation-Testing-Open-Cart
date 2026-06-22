@@ -34,6 +34,13 @@ public class Login_Page extends BasePage{
 	@FindBy(xpath="//h2[normalize-space()='My Account']")
 	WebElement verify ;
 	
+	@FindBy(xpath="//span[@class='caret']")
+	WebElement logout_drp ;
+	
+	@FindBy(xpath="//a[normalize-space()='Logout']")
+	WebElement logoutbtn ;
+	
+	
 	public String compare_txt() {
 		String txt=verify.getText();
 		return txt;
@@ -57,6 +64,10 @@ public class Login_Page extends BasePage{
 		//driver.switchTo().alert();
 		String msg=wrong_Login_alt.getText();
 		return msg;
+	}
+	public void Logout() {
+		logout_drp.click();
+		logoutbtn.click();
 	}
 	
 }
