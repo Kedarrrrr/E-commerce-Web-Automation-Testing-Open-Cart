@@ -26,7 +26,6 @@ public class Login_Test extends BaseClass {
 	public void TC_003(){
 		//Login Test with incorrect credentials
 		Login_Page lt = new Login_Page(driver);
-		lt.Logout();
 		lt.start();
 		lt.setMail("gadhaeletronis@gmail.com");
 		lt.setPwd("tapukeppa");
