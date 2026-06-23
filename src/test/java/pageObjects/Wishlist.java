@@ -1,8 +1,13 @@
 package pageObjects;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Wishlist extends BasePage{
 
@@ -25,7 +30,7 @@ public class Wishlist extends BasePage{
 	@FindBy(xpath="//button[@class='btn btn-default btn-lg']")
 	WebElement srhbtn;
 	
-	@FindBy(xpath="//div[@class='caption']//a[contains(text(),'MacBook')]")
+	@FindBy(xpath="//div[@id='content']//div[1]//div[1]//div[2]//div[1]//h4[1]//a[1]")
 	WebElement macBook;
 	
 	@FindBy(xpath="//button[@type='button']//i[@class='fa fa-heart']")
@@ -49,12 +54,17 @@ public class Wishlist extends BasePage{
 	@FindBy(xpath="//p[normalize-space()='Your wish list is empty.']")
 	WebElement empty_msg;
 	
+	
+	
 	@FindBy(xpath="//div[@class='table-responsive']")
 	WebElement item;
 	
 	@FindBy(xpath="//a[@class='btn btn-danger']")
 	WebElement rmbtn;
 	
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")
+	WebElement success;
+
 
 	//span[normalize-space()='Shopping Cart']"//i[@class='fa fa-heart']"undefined
 	//div[@class='table-responsive']
@@ -66,6 +76,8 @@ public class Wishlist extends BasePage{
 	//div[@id='product-product']//div[@class='btn-group']//button[1]
 	//div[@id='product-product']//div[@class='btn-group']//button[1]
 	//button[@type='button']//i[@class='fa fa-heart']
+	
+	//div[@class='alert alert-success alert-dismissible']
 	
 	public void search(String product_name) {
 		srh.sendKeys(product_name);
@@ -94,8 +106,12 @@ public class Wishlist extends BasePage{
 		
 	public String check_item() {
 		//MacBook
-		String txt=verify_product.getText();
-		return txt;
+		WebDriverWait mywait = new WebDriverWait(driver, Duration.ofSeconds(3));
+		WebElement txt=mywait.until(ExpectedConditions.visibilityOfElementLocated(
+			    By.xpath("//div[contains(@class,'alert-success')]")
+			));
+		String msg=txt.toString();
+		return msg;
 	}
 
 	
