@@ -62,7 +62,7 @@ public class Wishlist extends BasePage{
 	@FindBy(xpath="//a[@class='btn btn-danger']")
 	WebElement rmbtn;
 	
-	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")
+	@FindBy(xpath="//div[contains(@class,'alert-success')]")
 	WebElement success;
 
 
@@ -76,8 +76,9 @@ public class Wishlist extends BasePage{
 	//div[@id='product-product']//div[@class='btn-group']//button[1]
 	//div[@id='product-product']//div[@class='btn-group']//button[1]
 	//button[@type='button']//i[@class='fa fa-heart']
-	
+	//div[@id='content']//div[1]//div[1]//div[2]//div[1]//h4[1]//a[1]
 	//div[@class='alert alert-success alert-dismissible']
+	//div[@id='content']//div[1]//div[1]//div[2]//div[1]//h4[1]//a[1]
 	
 	public void search(String product_name) {
 		srh.sendKeys(product_name);

@@ -22,12 +22,6 @@ public class Wishlist_Test extends BaseClass{
 		Assert.assertEquals(" Success: You have added MacBook to your wish list!",wl.check_item() );
 	}
 	
-
-	//a[@class='btn btn-danger']
-	//a[@class='btn btn-danger']
-	//a[@class='btn btn-danger']
-	//div[@class='alert alert-success alert-dismissible']
-	// Success: You have modified your wish list!
 	@Test(priority=2)
 	public void TC_006_remove_wish() {
 		Wishlist wl=new Wishlist(driver);

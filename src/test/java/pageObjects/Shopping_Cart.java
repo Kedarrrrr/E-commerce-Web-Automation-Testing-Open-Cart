@@ -9,23 +9,7 @@ public class Shopping_Cart extends BasePage {
 	public Shopping_Cart(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
-	}
-
-
-	//div[@class='table-responsive']
-	//i[@class='fa fa-home']
-	//html
-	//div[@class='caption']//a[contains(text(),'MacBook')]
-	
-	//html
-	//html
-	//a[@title='Shopping Cart']
-	//button[@id='button-cart']
-	//span[normalize-space()='Shopping Cart']
-	//html
-	//html
-	//span[normalize-space()='Shopping Cart']
-	
+	}	
 	@FindBy(xpath="//div[@class='table-responsive']")
 	WebElement table;
 	
