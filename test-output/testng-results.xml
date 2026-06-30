@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-23T18:45:39 IST" name="Suite" finished-at="2026-06-23T18:45:59 IST" duration-ms="20357">
+  <suite started-at="2026-06-30T19:23:44 IST" name="Suite" finished-at="2026-06-30T19:23:55 IST" duration-ms="11017">
     <groups>
     </groups>
-    <test started-at="2026-06-23T18:45:39 IST" name="Test" finished-at="2026-06-23T18:45:59 IST" duration-ms="20357">
+    <test started-at="2026-06-30T19:23:44 IST" name="Test" finished-at="2026-06-30T19:23:55 IST" duration-ms="11017">
       <class name="testCases.Wishlist_Test">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.Wishlist_Test@5e5d171f]" started-at="2026-06-23T18:45:40 IST" name="setup" finished-at="2026-06-23T18:45:44 IST" duration-ms="4168" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.Wishlist_Test@5e5d171f]" started-at="2026-06-30T19:23:44 IST" name="setup" finished-at="2026-06-30T19:23:49 IST" duration-ms="4373" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,62 +23,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="TC_005_add_wish()[pri:1, instance:testCases.Wishlist_Test@5e5d171f]" started-at="2026-06-23T18:45:44 IST" name="TC_005_add_wish" finished-at="2026-06-23T18:45:58 IST" duration-ms="14473" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element found by By.xpath: //div[contains(@class,'alert-success')], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}.
-(tried for 3 seconds with 500 milliseconds interval)
-Build info: version: '4.40.0', revision: 'b3333f1'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.116, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\kedar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60548}, goog:processID: 26796, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60548/devtoo..., se:cdpVersion: 149.0.7827.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 34862ae0a252a3249139f5e599c068c2]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //div[contains(@class,'alert-success')], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}.
-(tried for 3 seconds with 500 milliseconds interval)
-Build info: version: '4.40.0', revision: 'b3333f1'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.116, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\kedar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60548}, goog:processID: 26796, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60548/devtoo..., se:cdpVersion: 149.0.7827.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 34862ae0a252a3249139f5e599c068c2
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at pageObjects.Wishlist.check_item(Wishlist.java:111)
-at testCases.Wishlist_Test.TC_005_add_wish(Wishlist_Test.java:22)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="TC_005_add_wish()[pri:1, instance:testCases.Wishlist_Test@5e5d171f]" started-at="2026-06-30T19:23:49 IST" name="TC_005_add_wish" finished-at="2026-06-30T19:23:54 IST" duration-ms="4976" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_005_add_wish -->
-        <test-method signature="TC_006_remove_wish()[pri:2, instance:testCases.Wishlist_Test@5e5d171f]" started-at="2026-06-23T18:45:58 IST" name="TC_006_remove_wish" finished-at="2026-06-23T18:45:59 IST" duration-ms="768" status="PASS">
+        <test-method signature="TC_006_remove_wish()[pri:2, instance:testCases.Wishlist_Test@5e5d171f]" started-at="2026-06-30T19:23:54 IST" name="TC_006_remove_wish" finished-at="2026-06-30T19:23:54 IST" duration-ms="750" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_006_remove_wish -->
-        <test-method is-config="true" signature="tear()[pri:0, instance:testCases.Wishlist_Test@5e5d171f]" started-at="2026-06-23T18:45:59 IST" name="tear" finished-at="2026-06-23T18:45:59 IST" duration-ms="408" status="PASS">
+        <test-method is-config="true" signature="tear()[pri:0, instance:testCases.Wishlist_Test@5e5d171f]" started-at="2026-06-30T19:23:54 IST" name="tear" finished-at="2026-06-30T19:23:55 IST" duration-ms="357" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tear -->

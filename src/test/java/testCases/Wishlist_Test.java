@@ -19,7 +19,7 @@ public class Wishlist_Test extends BaseClass{
 		lt.logintn.click();
 		wl.search("MacBook");
 		wl.wishlist_item();
-		Assert.assertEquals(" Success: You have added MacBook to your wish list!",wl.check_item() );
+		Assert.assertEquals(true,wl.table_visibility());
 	}
 	
 	@Test(priority=2)

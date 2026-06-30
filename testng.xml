@@ -10,6 +10,7 @@
 
     <classes>
       <class name="testCases.Wishlist_Test"/>
+
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
