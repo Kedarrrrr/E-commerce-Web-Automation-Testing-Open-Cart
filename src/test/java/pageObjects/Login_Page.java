@@ -69,5 +69,11 @@ public class Login_Page extends BasePage{
 		logout_drp.click();
 		logoutbtn.click();
 	}
+	public void Log_In() {
+		start();
+		setMail("gadhaelectronics@gmail.com");
+		setPwd("tapukepapa");
+		log();
+	}
 	
 }

@@ -1,16 +1,22 @@
 package pageObjects;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
-public class Checkout {
+public class Checkout extends BasePage{
 	
 
+	public Checkout(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
 	//input[@placeholder='Search']
 	//button[@class='btn btn-default btn-lg']
 
 	//a[normalize-space()='MacBook']
+	//div[@id='content']//div[1]//div[1]//div[2]//div[1]//h4[1]//a[1]
 
 	//button[@id='button-cart']
 
@@ -42,7 +48,7 @@ public class Checkout {
 	@FindBy(xpath="//button[@class='btn btn-default btn-lg']")
 	WebElement Search_Btn;
 	
-	@FindBy(xpath="//a[normalize-space()='MacBook']")
+	@FindBy(xpath="//div[@id='content']//div[1]//div[1]//div[2]//div[1]//h4[1]//a[1]")
 	WebElement MacBook;
 	
 	@FindBy(xpath="//button[@id='button-cart']")
@@ -97,9 +103,25 @@ public class Checkout {
 	    Select select = new Select(Zone);
 	    select.selectByVisibleText("Maharashtra");
 	}
-	
-	public void add_Item() {
-		
+	//Step 2
+	public void fill_Details_existing() {
+		continuebtn.click();
+	}
+	//Step 3
+	public String place_order(String m) {
+		text_msg.sendKeys(m);
+		terms_check.click();
+		place_Order.click();
+		String txt=msg.getText();
+		return txt;
+	}
+	//Step 1
+	public void add_Item(String product) {
+		Search_box.sendKeys(product);
+		Search_Btn.click();
+		MacBook.click();
+		add_Cart_Btn.click();
+		checkout_Btn.click();
 	}
 	public void fill_Details() {
 		
